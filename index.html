@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exercice canvas 3</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script type="text/javascript">
+    //Reproduire la voiture.
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    // bloc haut de la voiture
+    ctx.fillStyle = "#00b353";
+    ctx.fillRect(110,50,190,110);
+    //bloc bas de la voiture
+    ctx.fillStyle = "#00b353";
+    ctx.fillRect(020,150,400,110);
+    //1er Roue
+    ctx.beginPath();
+    ctx.strokeStyle = "#369";
+    ctx.fillStyle = "#cdcdcd";
+    //math.pi*2 = au cercle entier
+    ctx.arc(60,315,55,0,Math.PI*2,false);
+    // pour le trait
+    ctx.stroke();
+    //pour colorer l'interieure
+    ctx.fill();
+    //2eme Roue
+    ctx.beginPath();
+    ctx.arc(345,315,55,0,Math.PI*2,false);
+    ctx.stroke();
+    ctx.fill();
+    </script>
+  </body>
+</html>
